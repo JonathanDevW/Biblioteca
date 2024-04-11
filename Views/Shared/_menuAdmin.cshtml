@@ -1,0 +1,75 @@
+﻿<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <li class="nav-item">
+        <a asp-controller="Home" asp-action="Mantenimiento" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+                Mantenimiento
+                <i class="right fas fa-angle-left"></i>
+            </p>
+        </a>
+        <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a asp-controller="Mantenimiento" asp-action="Usuarios" class="nav-link">
+                    <i class="fas fa-solid fa-user nav-icon"></i>
+                    <p>Usuario</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Mantenimiento" asp-action="Roles" class="nav-link">
+                    <i class="fas fa-solid fa-hashtag nav-icon"></i>
+                    <p>Rol</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Mantenimiento" asp-action="Estados" class="nav-link">
+                    <i class="fas fa-check nav-icon"></i>
+                    <p>Estado</p>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a asp-controller="Home" asp-action="Movimientos" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+                Movimientos
+                <i class="right fas fa-angle-left"></i>
+            </p>
+        </a>
+        <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a asp-controller="Movimientos" asp-action="Prestamos" class="nav-link">
+                    <i class="fas fa-solid fa-user nav-icon"></i>
+                    <p>Prestamos</p>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a asp-controller="Home" asp-action="Catalogo" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+                Catalogos
+                <i class="right fas fa-angle-left"></i>
+            </p>
+        </a>
+        <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a asp-controller="Catalogo" asp-action="Libros" class="nav-link">
+                    <i class="fas fa-solid fa-user nav-icon"></i>
+                    <p>Libros</p>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a asp-controller="Catalogo" asp-action="Categorias" class="nav-link">
+                    <i class="fas fa-solid fa-user nav-icon"></i>
+                    <p>Catergorias</p>
+                </a>
+            </li>
+        </ul>
+
+    </li>
+</ul>
+

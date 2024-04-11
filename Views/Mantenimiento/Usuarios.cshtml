@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Lector";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Usuarios</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="index">Home</a></li>
+                    <li class="breadcrumb-item active">Usuario</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="card">
+        <div class="card-header bg-primary">
+            <h3 class="card-title">Agregar Usuario&nbsp&nbsp</h3><a data-toggle="modal" data-target="#AddReaderModal" role="button"><i class="fas fa-plus-circle"></i></a>
+        </div>
+        <div class="card-body row">
+           <div class="table-responsive px-2">
+              <div class="row justify-content-center align-items-center minh=100">@ViewBag.msg</div>
+              <table id="tbl" class="table-bordered table-striped table-sm" width="100%" cellspacing="0">
+                  <thead>
+                      <tr>
+                          <th>Usuario</th>
+                          <th>Nombre</th>
+                          <th>Correo</th>
+                          <th>Rol</th>
+                          <th>Estado</th>
+                          <th></th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                        @while (ViewBag.query.Read())
+                        {
+                            <tr>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("nickname"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("nombre"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("correo"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("rol"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("estado"))</td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modificarModal" role="button" onclick="modUser()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#PassChange" role="button" onclick="$('#id_usuario_r').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Reiniciar contraseña" style="width:25px"><i class="fas fa-lock"></i></a></td>
+                            </tr>
+                        }
+                  </tbody>
+              </table> 
+                @{
+                    ViewBag.query.Close();
+                }
+           </div> 
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="AddReaderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+            <form method="POST" asp-controller="Mantenimiento" asp-action="AgregarUsuario">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Lector</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Campos -->
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="usuario">Usuario</label>
+                                <input autofocus class="form-control" id="usuario" name="usuario" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="password">Contraseña</label>
+                                <input class="form-control" id="password" name="password" type="text" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nombrecompleto">Nombre Completo</label>
+                                <input autofocus class="form-control" id="nomcom" name="nomCom" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="correo">Correo</label>
+                                <input class="form-control" id="correo" name="correo" type="text" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="rol">Rol</label>
+                                <select autofocus class="form-control" id="rol" name="rol" required>
+                                    <option value="1">Bibliotecario</option>
+                                    <option value="2">Docente</option>
+                                    <option value="5">Alumno</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="estado">Estado</label>
+                                <select class="form-control" id="estado" name="estado" required>
+                                    <option value="1">Activo</option>
+                                    <option value="2">Inactivo</option>
+                                    <option value="3">Bloqueado</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+                <div id="result">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para restablecer la contraseña desde Usuaria Administrador -->
+<div class="modal fade" id="RestContrasena" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+            <form method="POST" asp-controller="Mantenimiento" asp-action="Restablecer">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Restablecer Contraseña</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Campos -->
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label for="password_r">Ingrese la nueva contraseña</label>
+                                <input autofocus class="form-control" id="password_r" name="password_r" type="text" required />
+                                <input type="hidden" name="id_usuario_r" id="id_usuario_r"
+                            </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Restablecer</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+                <div id="result">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/plugins/jszip/jszip.min.js"></script>
+    <script src="~/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="~/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="~/js/dataTable.js"></script>
+}

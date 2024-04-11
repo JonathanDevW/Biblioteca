@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Acercade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acerca de || Biblioteca</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+            <!-- Main content -->
+            <section class="content">
+
+                <!-- Default box -->
+                <div class="card card-solid">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <h3 class="d-inline-block d-sm-none">BIBLIOTECA VIRTUAL</h3>
+                                <div class="col-12">
+                                    <img src="~/img/Logo.png" class="product-image" alt="Biblioteca Image">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <h3 class="my-3">BIBLIOTECA VIRTUAL</h3>
+                        <div class="row mt-4">
+                            <nav class="w-100">
+                                <div class="nav nav-tabs" id="product-tab" role="tablist">
+                                    <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Descripción</a>
+                                    <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Raquel Cuéllar</a>
+                                    <a class="nav-item nav-link" id="product-rating-tab" data-toggle="tab" href="#product-rating" role="tab" aria-controls="product-rating" aria-selected="false">Jonathan López</a>
+                                </div>
+                            </nav>
+                            <div class="tab-content p-3" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab">Te ofrecemos acceso ilimitado a una amplia colección de libros electrónicos, artículos científicos y revistas. Accede a la información desde cualquier lugar con internet, 24/7. Descarga contenido para lectura offline, reproduce audiolibros y utiliza herramientas para el aprendizaje como marcar contenido, tomar notas y realizar búsquedas personalizadas. ¡Empieza a usarla ya!.
+                                </div>
+                                <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab"> Estudiante de 4º año de Informática, 21 años, apasionada por la programación. Tengo experiencia en Python, Java y C++ y me interesa el desarrollo de software, aplicaciones web y juegos. También tengo conocimientos en inteligencia artificial, machine learning y análisis de datos. Soy responsable, dedicada y con ganas de aprender.  </div>
+                                <div class="tab-pane fade" id="product-rating" role="tabpanel" aria-labelledby="product-rating-tab"> Estudiante de 4º año de Informática, 20 años, apasionado por la programación. Tengo experiencia en Python, Java y C++ y me interesa el desarrollo de software, aplicaciones web y juegos. También tengo conocimientos en inteligencia artificial, machine learning y análisis de datos. Soy responsable, dedicado y con ganas de aprender.  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+            </section>
+            <!-- /.content -->
+        </div>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="js/demo.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.product-image-thumb').on('click', function () {
+                var $image_element = $(this).find('img')
+                $('.product-image').prop('src', $image_element.attr('src'))
+                $('.product-image-thumb.active').removeClass('active')
+                $(this).addClass('active')
+            })
+        })
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "Libros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Libros</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="index">Home</a></li>
+                    <li class="breadcrumb-item active">Usuario</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="card">
+        <div class="card-header bg-primary">
+            <h3 class="card-title">Agregar libro&nbsp&nbsp</h3><a data-toggle="modal" data-target="#AddReaderModal" role="button"><i class="fas fa-plus-circle"></i></a>
+        </div>
+        <div class="card-body row">
+            <div class="table-responsive px-2">
+                <div class="row justify-content-center align-items-center minh=100">@ViewBag.msg</div>
+                <table id="tbl" class="table-bordered table-striped table-sm" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                            <th>ISBN</th>
+                            <th>Año de publicación</th>
+                            <th>Ejemplares</th>
+                            <th>Categoria</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @while (ViewBag.query.Read())
+                        {
+                            <tr>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("titulo"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("autor"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("isbn"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("anio_publicacion"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("ejemplares_disponibles"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("nombre"))</td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modificarModal" role="button" onclick="modUser()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @{
+                    ViewBag.query.Close();
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="AddReaderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+            <form method="POST" asp-controller="Catalogo" asp-action="AgregarLibro">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Lector</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Campos -->
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="usuario">Titulo</label>
+                                <input autofocus class="form-control" id="titulo" name="titulo" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="autor">Autor</label>
+                                <input class="form-control" id="autor" name="autor" type="text" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="isbn">ISBN</label>
+                                <input autofocus class="form-control" id="isbn" name="isbn" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="correo">Año de publicación</label>
+                                <input class="form-control" id="anio_ublicacion" name="anio_publicacion" type="text" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ejem">Número de ejemplares</label>
+                                <input class="form-control" id="correo" name="ejemplares_disponibles" type="text" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="rol">Categoria</label>
+                                <select autofocus class="form-control" id="rol" name="nombre" required>
+                                    <option value="1">Informatica</option>
+                                    <option value="2">Docente</option>
+                                    <option value="5">Alumno</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+                <div id="result">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/plugins/jszip/jszip.min.js"></script>
+    <script src="~/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="~/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="~/js/dataTable.js"></script>
+}

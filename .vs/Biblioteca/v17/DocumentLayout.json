@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\movimientos\\prestamos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\movimientos\\prestamos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\mantenimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\mantenimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\mantenimiento\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -15,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\mantenimiento\\roles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\mantenimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\mantenimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\movimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\movimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\mantenimiento\\estados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\mantenimiento\\estados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\catalogo\\libros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -58,41 +58,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Prestamos.cshtml",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Movimientos\\Prestamos.cshtml",
               "RelativeDocumentMoniker": "Views\\Movimientos\\Prestamos.cshtml",
               "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Movimientos\\Prestamos.cshtml",
               "RelativeToolTip": "Views\\Movimientos\\Prestamos.cshtml",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAAAF8AAAA+AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-07T05:05:59.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MantenimientoController.cs",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MantenimientoController.cs",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
-              "RelativeToolTip": "Controllers\\MantenimientoController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwFUAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T05:55:29.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Roles.cshtml",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Roles.cshtml",
               "RelativeDocumentMoniker": "Views\\Mantenimiento\\Roles.cshtml",
@@ -100,12 +83,11 @@
               "RelativeToolTip": "Views\\Mantenimiento\\Roles.cshtml",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAD8AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-05T04:56:02.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-05T04:56:02.515Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Usuarios.cshtml",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Usuarios.cshtml",
               "RelativeDocumentMoniker": "Views\\Mantenimiento\\Usuarios.cshtml",
@@ -113,12 +95,11 @@
               "RelativeToolTip": "Views\\Mantenimiento\\Usuarios.cshtml",
               "ViewState": "AQIAAFgAAAAAAAAAAAAAADIAAAAEAQAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-05T05:48:49.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-05T05:48:49.678Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MovimientosController.cs",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MovimientosController.cs",
               "RelativeDocumentMoniker": "Controllers\\MovimientosController.cs",
@@ -126,12 +107,11 @@
               "RelativeToolTip": "Controllers\\MovimientosController.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAgwBUAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T05:08:14.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T05:08:14.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Estados.cshtml",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Estados.cshtml",
               "RelativeDocumentMoniker": "Views\\Mantenimiento\\Estados.cshtml",
@@ -139,8 +119,36 @@
               "RelativeToolTip": "Views\\Mantenimiento\\Estados.cshtml",
               "ViewState": "AQIAAD4AAAAAAAAAAAAgwD4AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-12T00:34:16.941Z",
+              "WhenOpened": "2024-04-12T00:34:16.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CatalogoController.cs",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\CatalogoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CatalogoController.cs",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\CatalogoController.cs",
+              "RelativeToolTip": "Controllers\\CatalogoController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA9wAoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T05:08:29.007Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MantenimientoController.cs",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MantenimientoController.cs",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
+              "RelativeToolTip": "Controllers\\MantenimientoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFUAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T05:55:29.599Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -152,8 +160,7 @@
               "RelativeToolTip": "Views\\Catalogo\\Libros.cshtml",
               "ViewState": "AQIAADYAAAAAAAAAAAAAAGcAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-07T05:47:54.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T05:47:54.181Z"
             },
             {
               "$type": "Document",
@@ -165,21 +172,7 @@
               "RelativeToolTip": "Views\\Catalogo\\Categorias.cshtml",
               "ViewState": "AQIAAEUAAAAAAAAAAAAAAEwAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-07T05:27:55.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CatalogoController.cs",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\CatalogoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CatalogoController.cs",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\CatalogoController.cs",
-              "RelativeToolTip": "Controllers\\CatalogoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T05:08:29.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T05:27:55.858Z"
             },
             {
               "$type": "Document",
@@ -203,8 +196,7 @@
               "RelativeToolTip": "Models\\BaseDatos.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T04:59:33.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T04:59:33.17Z"
             },
             {
               "$type": "Document",

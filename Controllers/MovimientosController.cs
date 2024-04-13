@@ -18,14 +18,14 @@ namespace Biblioteca.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AgregarNuevoPrestamo()
         {
-            string nickname = Request.Form["nickname"];
             string titulo = Request.Form["titulo"];
+            string nickname = Request.Form["nickname"];
             string fecha_prestamo = Request.Form["fecha_prestamo"];
             string fecha_devolucion = Request.Form["fecha_devolucion"];
             string categoria = Request.Form["nombre"];
             string estado = Request.Form["estado"];
 
-            string[] datos = { "nickname:" + nickname, "titulo:" + titulo, "fecha_prestamo:" + fecha_prestamo, "fecha_devolucion:" + fecha_devolucion, "nombre:" + categoria, "estado:" + estado };
+            string[] datos = { "id_titulo:" + titulo, "id_usuario:" + nickname, /*"fecha_prestamo:" + fecha_prestamo,*/ "fecha_devolucion:" + fecha_devolucion, "id_categoria:" + categoria, "id_estado:" + estado };
             Modelo com = new Modelo();
             try
             {

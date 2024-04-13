@@ -9,7 +9,7 @@ namespace Biblioteca.Controllers
         public IActionResult Usuarios()
         {
             Modelo query = new Modelo();
-            ViewBag.query = query.BuscarTodo("vista_Usuarios");
+            ViewBag.query = query.BuscarTodo("Vista_Usuarios");
 
             return View();
         }
@@ -18,13 +18,16 @@ namespace Biblioteca.Controllers
         public IActionResult Roles()
         {
             Modelo query = new Modelo();
-            ViewBag.query = query.BuscarTodo("vista_Roles");
+            ViewBag.query = query.BuscarTodo("Vista_Roles");
 
             return View();
         }
 
         public IActionResult Estados()
         {
+            Modelo query = new Modelo();
+            ViewBag.query = query.BuscarTodo("Vista_Estado");
+
             return View();
         }
         [HttpPost]
@@ -50,7 +53,7 @@ namespace Biblioteca.Controllers
                 ViewBag.msg = "Error al procesar los datos";
             }
 
-            ViewBag.query = com.BuscarTodo("vista_Usuarios");
+            ViewBag.query = com.BuscarTodo("Vista_Usuarios");
             return View("Usuarios");
 
         }
@@ -75,8 +78,8 @@ namespace Biblioteca.Controllers
                 ViewBag.msg = "Error al procesar los datos";
             }
 
-            ViewBag.query = com.BuscarTodo("vista_Roles");
-            return View("Rol");
+            ViewBag.query = com.BuscarTodo("Vista_Roles");
+            return View("Roles");
 
         }
 
@@ -100,8 +103,8 @@ namespace Biblioteca.Controllers
                 ViewBag.msg = "Error al procesar los datos";
             }
 
-            ViewBag.query = com.BuscarTodo("vista_Estados");
-            return View("Estado");
+            ViewBag.query = com.BuscarTodo("Vista_Estado");
+            return View("Estados");
 
         }
 
@@ -111,7 +114,7 @@ namespace Biblioteca.Controllers
         {
             Modelo com = new Modelo();
 
-            ViewBag.query = com.BuscarTodo("vista_Usuarios");
+            ViewBag.query = com.BuscarTodo("Vista_Usuarios");
             return View("Usuarios");
         }
 

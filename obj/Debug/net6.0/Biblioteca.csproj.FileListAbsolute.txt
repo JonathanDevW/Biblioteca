@@ -1303,3 +1303,4 @@ C:\Users\Jonathan\Desktop\Biblioteca\obj\Debug\net6.0\refint\Biblioteca.dll
 C:\Users\Jonathan\Desktop\Biblioteca\obj\Debug\net6.0\Biblioteca.pdb
 C:\Users\Jonathan\Desktop\Biblioteca\obj\Debug\net6.0\Biblioteca.genruntimeconfig.cache
 C:\Users\Jonathan\Desktop\Biblioteca\obj\Debug\net6.0\ref\Biblioteca.dll
+C:\Users\Jonathan\Desktop\Biblioteca\obj\Debug\net6.0\Biblioteca.sourcelink.json

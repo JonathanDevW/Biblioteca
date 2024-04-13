@@ -80,20 +80,24 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-6">
-                                <label for="usuario">Usuario</label>
-                                <input autofocus class="form-control" id="usuario" name="usuario" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
-                            </div>
-                            <div class="col-md-6">
                                 <label for="password">Libro</label>
-                                <input class="form-control" id="password" name="password" type="text" required />
+                                <input class="form-control" id="password" name="titulo" type="text" required />
                             </div>
                             <div class="col-md-6">
+                                <label for="usuario">Usuario</label>
+                                <input autofocus class="form-control" id="usuario" name="nickname" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
+                            </div>
+@*                             <div class="col-md-6">
                                 <label for="fechaPrestamo">Fecha de Préstamo</label>
                                 <input class="form-control" id="fechaPrestamo" name="fecha_prestamo" type="date" readonly required />
-                            </div>
+                            </div> *@
                             <div class="col-md-6">
                                 <label for="fechaDevolucion">Fecha de Devolución</label>
                                 <input class="form-control" id="fechaDevolucion" name="fecha_devolucion" type="date" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="password">Categoria</label>
+                                <input class="form-control" id="categoria" name="nombre" type="text" required />
                             </div>
                                 <label for="estado">Estado</label>
                                 <select class="form-control" id="estado" name="estado" required>

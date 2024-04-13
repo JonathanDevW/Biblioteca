@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\models\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:models\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\models\\modelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:models\\modelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\movimientos\\prestamos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\movimientos\\prestamos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\movimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\movimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\mantenimiento\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\mantenimiento\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\mantenimiento\\roles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\mantenimiento\\roles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\mantenimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\mantenimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\mantenimiento\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\mantenimiento\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\movimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\movimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\mantenimiento\\estados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\mantenimiento\\estados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\catalogocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\catalogo\\libros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -39,12 +39,16 @@
       "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\catalogo\\categorias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\models\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:models\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\mantenimiento\\roles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\mantenimiento\\roles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\models\\modelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:models\\modelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,86 +58,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Categorias.cshtml",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Catalogo\\Categorias.cshtml",
-              "RelativeDocumentMoniker": "Views\\Catalogo\\Categorias.cshtml",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Catalogo\\Categorias.cshtml",
-              "RelativeToolTip": "Views\\Catalogo\\Categorias.cshtml",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEwAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-07T05:27:55.858Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CatalogoController.cs",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\CatalogoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CatalogoController.cs",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\CatalogoController.cs",
-              "RelativeToolTip": "Controllers\\CatalogoController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwB4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T05:08:29.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MovimientosController.cs",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MovimientosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MovimientosController.cs",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MovimientosController.cs",
-              "RelativeToolTip": "Controllers\\MovimientosController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBEAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T05:08:14.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Prestamos.cshtml",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Movimientos\\Prestamos.cshtml",
               "RelativeDocumentMoniker": "Views\\Movimientos\\Prestamos.cshtml",
               "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Movimientos\\Prestamos.cshtml",
               "RelativeToolTip": "Views\\Movimientos\\Prestamos.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEUAAAA7AAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAAAF8AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-07T05:05:59.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Modelo.cs",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\Modelo.cs",
-              "RelativeDocumentMoniker": "Models\\Modelo.cs",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\Modelo.cs",
-              "RelativeToolTip": "Models\\Modelo.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAA9wDQAAAAnAAAA",
+              "DocumentIndex": 3,
+              "Title": "MantenimientoController.cs",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MantenimientoController.cs",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
+              "RelativeToolTip": "Controllers\\MantenimientoController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwFUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-06T16:37:50.824Z",
+              "WhenOpened": "2024-04-05T05:55:29.599Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseDatos.cs",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\BaseDatos.cs",
-              "RelativeDocumentMoniker": "Models\\BaseDatos.cs",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\BaseDatos.cs",
-              "RelativeToolTip": "Models\\BaseDatos.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBYAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T04:59:33.17Z",
+              "DocumentIndex": 2,
+              "Title": "Roles.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Roles.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mantenimiento\\Roles.cshtml",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Roles.cshtml",
+              "RelativeToolTip": "Views\\Mantenimiento\\Roles.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAD8AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-05T04:56:02.515Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Usuarios.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mantenimiento\\Usuarios.cshtml",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Usuarios.cshtml",
+              "RelativeToolTip": "Views\\Mantenimiento\\Usuarios.cshtml",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAAADIAAAAEAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-05T05:48:49.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovimientosController.cs",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MovimientosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MovimientosController.cs",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MovimientosController.cs",
+              "RelativeToolTip": "Controllers\\MovimientosController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T05:08:14.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Estados.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Estados.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mantenimiento\\Estados.cshtml",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Estados.cshtml",
+              "RelativeToolTip": "Views\\Mantenimiento\\Estados.cshtml",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwD4AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T00:34:16.941Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -143,25 +150,65 @@
               "RelativeDocumentMoniker": "Views\\Catalogo\\Libros.cshtml",
               "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Catalogo\\Libros.cshtml",
               "RelativeToolTip": "Views\\Catalogo\\Libros.cshtml",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGQAAAAyAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAGcAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-07T05:47:54.181Z"
+              "WhenOpened": "2024-04-07T05:47:54.181Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MantenimientoController.cs",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MantenimientoController.cs",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
-              "RelativeToolTip": "Controllers\\MantenimientoController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAIwE8AAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "Categorias.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Catalogo\\Categorias.cshtml",
+              "RelativeDocumentMoniker": "Views\\Catalogo\\Categorias.cshtml",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Catalogo\\Categorias.cshtml",
+              "RelativeToolTip": "Views\\Catalogo\\Categorias.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAEwAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-07T05:27:55.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CatalogoController.cs",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\CatalogoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CatalogoController.cs",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\CatalogoController.cs",
+              "RelativeToolTip": "Controllers\\CatalogoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T05:55:29.599Z"
+              "WhenOpened": "2024-04-07T05:08:29.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Modelo.cs",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\Modelo.cs",
+              "RelativeDocumentMoniker": "Models\\Modelo.cs",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\Modelo.cs",
+              "RelativeToolTip": "Models\\Modelo.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAA9wDQAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T16:37:50.824Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "BaseDatos.cs",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\BaseDatos.cs",
+              "RelativeDocumentMoniker": "Models\\BaseDatos.cs",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\BaseDatos.cs",
+              "RelativeToolTip": "Models\\BaseDatos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T04:59:33.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -170,30 +217,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-05T05:55:04.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Usuarios.cshtml",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Usuarios.cshtml",
-              "RelativeDocumentMoniker": "Views\\Mantenimiento\\Usuarios.cshtml",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Usuarios.cshtml",
-              "RelativeToolTip": "Views\\Mantenimiento\\Usuarios.cshtml",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAAAF8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-05T05:48:49.678Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Roles.cshtml",
-              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Roles.cshtml",
-              "RelativeDocumentMoniker": "Views\\Mantenimiento\\Roles.cshtml",
-              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Roles.cshtml",
-              "RelativeToolTip": "Views\\Mantenimiento\\Roles.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACUAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-05T04:56:02.515Z"
             }
           ]
         }

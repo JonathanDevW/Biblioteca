@@ -39,7 +39,7 @@
                         @while (ViewBag.query.Read())
                         {
                             <tr>
-                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("Estado"))</td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("estado"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("descripcion"))</td>
                                 <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modificarModal" role="button" onclick="modUser()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
                                 <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#passwordModal" role="button" onclick="passUser()" data-placement="top" title="Reiniciar contraseña" style="width:25px"><i class="fas fa-lock"></i></a></td>
@@ -73,7 +73,7 @@
                         <div class="form-row">
                             <div class="col-md-6">
                                 <label for="estado">Estado</label>
-                                <input autofocus class="form-control" id="estado" name="estado" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
+                                <input autofocus class="form-control" id="estado" name="estado" type="text" style="text-transform: lowercase;" placeholder="ejemplo: Prestado" required />
                             </div>
                             <div class="col-md-6">
                                 <label for="descripcion">Descripción</label>

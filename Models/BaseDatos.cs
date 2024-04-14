@@ -16,7 +16,7 @@ public class BaseDatos
 
     private void Configurar()
     {
-        cadenaConexion = "Provider = sqloledb; Data Source = DESKTOP-FETVTFC; Initial Catalog = SisBibliotecario; User Id = sa; Password = uma;";
+        cadenaConexion = "Provider = sqloledb; Data Source = LAPTOP-HQGAUREL; Initial Catalog = SisBibliotecario; User Id = sa; Password = uma;";
         conexion = new OleDbConnection(cadenaConexion);
     }
 

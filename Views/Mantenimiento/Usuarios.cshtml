@@ -18,6 +18,7 @@
     </div>
 </section>
 
+<!-- Tabla Usuario -->
 <section class="content">
     <div class="card">
         <div class="card-header bg-primary">
@@ -47,7 +48,7 @@
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("correo"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("rol"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("estado"))</td>
-                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModUsuario" role="button" onclick="modUser()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModUsuario" role="button" onclick="$('#m_id_usuario').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")));modUsuario(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
                                 <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#RestContrasena" role="button" onclick="$('#id_usuario_r').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Reiniciar contraseña" style="width:25px"><i class="fas fa-lock"></i></a></td>
                             </tr>
                         }
@@ -61,6 +62,7 @@
     </div>
 </section>
 
+<!-- Modal para agregar un usuario desde Usuario Administrador -->
 <div class="modal fade" id="AddReaderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
 
@@ -122,7 +124,7 @@
     </div>
 </div>
 
-<!-- Modal para restablecer la contraseña desde Usuaria Administrador -->
+<!-- Modal para restablecer la contraseña desde Usuario Administrador -->
 <div class="modal fade" id="RestContrasena" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
 
@@ -158,11 +160,12 @@
     </div>
 </div>
 
+<!-- Modal para modificar los datos de un usuario desde Usuario Administrador -->
 <div class="modal fade" id="ModUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
 
         <div class="modal-content">
-            <form method="POST" asp-controller="Mantenimiento" asp-action="ModificarUsuario">
+            <form method="POST" asp-controller="Mantenimiento" asp-action="ModUsuario">
                 @Html.AntiForgeryToken()
                 <div class="modal-header">
                     <h5 class="modal-title">Modificar Usaurio</h5>
@@ -194,7 +197,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="estado">Estado</label>
-                                <select class="form-control" id="estado" name="estado" required>
+                                <select class="form-control" id="m_estado" name="m_estado" required>
                                     <option value="1">Activo</option>
                                     <option value="2">Inactivo</option>
                                     <option value="3">Bloqueado</option>
@@ -207,6 +210,8 @@
                     <button type="submit" class="btn btn-primary">Modificar</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
+                <input type="hidden" name="m_id_usuario" id="m_id_usuario" />
+
             </form>
         </div>
     </div>

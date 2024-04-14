@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Biblioteca.Library;
+using static Modelo;
 
 namespace Biblioteca.Controllers
 {
@@ -12,7 +13,7 @@ namespace Biblioteca.Controllers
         {
             Modelo query = new Modelo();
             ViewBag.query = query.BuscarTodo("Vista_Usuarios");
-            ViewBag.roles = new HtmlString(MyLib.llenar("rol","id_rol","rol","id_rol","id_rol"));
+            ViewBag.roles = new HtmlString(MyLib.llenar("rol", "id_rol", "rol", "id_rol", "id_rol"));
             return View();
         }
 
@@ -32,6 +33,7 @@ namespace Biblioteca.Controllers
 
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AgregarUsuario()
@@ -120,11 +122,58 @@ namespace Biblioteca.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Restablecer()
         {
+            string r_password = Request.Form["password_r"];
+            string idUsuario = Request.Form["id_usuario_r"];
+            string[] datos = { "password:" + r_password };
+
             Modelo com = new Modelo();
+            try
+            {
+                com.Actualizar("usuario", datos, idUsuario);
+                ViewBag.msg = "La contraseña ha sido restablecida con éxito";
+            }
+            catch (Exception ex)
+            {
+                ViewBag.msg = "Error al restablecer la contraseña: " + ex.Message;
+            }
 
             ViewBag.query = com.BuscarTodo("Vista_Usuarios");
             return View("Usuarios");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ModUsuario()
+        {
+            string idUsuario = Request.Form["id_usuario_r"];
+            string m_usuario = Request.Form["m_usuario"];
+            string m_nombre = Request.Form["m_nombre"];
+            string m_email = Request.Form["m_email"];
+            string m_rol = Request.Form["rol"];
+            string m_estado = Request.Form["m_estado"];
+
+            Modelo com = new Modelo();
+
+            try
+            {
+
+                string[] datos = { "m_usuario:" + m_usuario, "m_nombre:" + m_nombre,"m_email:" + m_email, "rol:" + m_rol, "m_estado:" + m_estado };
+
+                com.Actualizar("usuario", datos, idUsuario);
+
+                ViewBag.msg = "Los datos han sido actualizados con éxito";
+            }
+            catch (Exception ex)
+            {
+                ViewBag.msg = "Error al actualizar datos: " + ex.Message;
+            }
+
+            ViewBag.query = com.BuscarTodo("Vista_Usuarios");
+            return View("Usuarios");
+
+
+        }
     }
+
+
 }

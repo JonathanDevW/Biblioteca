@@ -96,4 +96,27 @@ public class Modelo
         }
     }
 
+    public void Actualizar(string tabla, string[] datos, string idUsuario)
+    {
+        BaseDatos com = new BaseDatos(); // Instancia a la base de datos
+        com.Conectar(); // Se conecta a la instancia
+        string sql = "UPDATE " + tabla + " SET "; // Query de actualización
+
+        foreach (string data1 in datos)
+        {
+            string[] partes = data1.Split(':');
+            sql += partes[0] + " = '" + partes[1] + "', ";
+        }
+        sql = sql.Substring(0, sql.Length - 2);
+
+        // Agregar cláusula WHERE para actualizar solo el usuario específico
+        sql += " WHERE id_usuario = '" + idUsuario + "'";
+
+        com.CrearComando(sql);
+        // Debug.WriteLine(sql);
+        com.EjecutarComando();
+        com.Desconectar();
+    }
+
+
 }

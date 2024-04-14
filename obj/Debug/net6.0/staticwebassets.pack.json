@@ -157,6 +157,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\wwwroot\\files\\Spanish.json",
+      "PackagePath": "staticwebassets\\files\\Spanish.json"
+    },
+    {
       "Id": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\wwwroot\\img\\Bib.jpg",
       "PackagePath": "staticwebassets\\img\\Bib.jpg"
     },

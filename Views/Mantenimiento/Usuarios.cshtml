@@ -24,21 +24,21 @@
             <h3 class="card-title">Agregar Usuario&nbsp&nbsp</h3><a data-toggle="modal" data-target="#AddReaderModal" role="button"><i class="fas fa-plus-circle"></i></a>
         </div>
         <div class="card-body row">
-           <div class="table-responsive px-2">
-              <div class="row justify-content-center align-items-center minh=100">@ViewBag.msg</div>
-              <table id="tbl" class="table-bordered table-striped table-sm" width="100%" cellspacing="0">
-                  <thead>
-                      <tr>
-                          <th>Usuario</th>
-                          <th>Nombre</th>
-                          <th>Correo</th>
-                          <th>Rol</th>
-                          <th>Estado</th>
-                          <th></th>
-                          <th></th>
-                      </tr>
-                  </thead>
-                  <tbody>
+            <div class="table-responsive px-2">
+                <div class="row justify-content-center align-items-center minh=100">@Html.Raw(@ViewBag.msg)</div>
+                <table id="tbl" class="table-bordered table-striped table-sm" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                            <th>Estado</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         @while (ViewBag.query.Read())
                         {
                             <tr>
@@ -47,16 +47,16 @@
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("correo"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("rol"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("estado"))</td>
-                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modificarModal" role="button" onclick="modUser()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
-                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#PassChange" role="button" onclick="$('#id_usuario_r').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Reiniciar contraseña" style="width:25px"><i class="fas fa-lock"></i></a></td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModUsuario" role="button" onclick="modUser()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#RestContrasena" role="button" onclick="$('#id_usuario_r').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Reiniciar contraseña" style="width:25px"><i class="fas fa-lock"></i></a></td>
                             </tr>
                         }
-                  </tbody>
-              </table> 
+                    </tbody>
+                </table>
                 @{
                     ViewBag.query.Close();
                 }
-           </div> 
+            </div>
         </div>
     </div>
 </section>
@@ -96,9 +96,7 @@
                             <div class="col-md-6">
                                 <label for="rol">Rol</label>
                                 <select autofocus class="form-control" id="rol" name="rol" required>
-                                    <option value="1">Bibliotecario</option>
-                                    <option value="2">Docente</option>
-                                    <option value="5">Alumno</option>
+                                    @Html.Raw(ViewBag.roles)
                                 </select>
                             </div>
                             <div class="col-md-6">
@@ -118,7 +116,6 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
                 <div id="result">
-
                 </div>
             </form>
         </div>
@@ -145,10 +142,10 @@
                             <div class="col-md-12">
                                 <label for="password_r">Ingrese la nueva contraseña</label>
                                 <input autofocus class="form-control" id="password_r" name="password_r" type="text" required />
-                                <input type="hidden" name="id_usuario_r" id="id_usuario_r"
+                                <input type="hidden" name="id_usuario_r" id="id_usuario_r" />
                             </div>
                         </div>
-                   </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Restablecer</button>
@@ -160,6 +157,61 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="ModUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+            <form method="POST" asp-controller="Mantenimiento" asp-action="ModificarUsuario">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Modificar Usaurio</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Campos -->
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label for="password_r">Usuario</label>
+                                <input autofocus class="form-control" id="m_usuario" name="m_usuario" type="text" required />
+                            </div>
+                            <div class="col-md-12">
+                                <label for="password_r">Nombre</label>
+                                <input autofocus class="form-control" id="m_nombre" name="m_nombre" type="text" required />
+                            </div>
+                            <div class="col-md-12">
+                                <label for="password_r">Correo Electronico</label>
+                                <input autofocus class="form-control" id="m_email" name="m_email" type="text" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="rol">Rol</label>
+                                <select autofocus class="form-control" id="rol" name="rol" required>
+                                    @Html.Raw(ViewBag.roles)
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="estado">Estado</label>
+                                <select class="form-control" id="estado" name="estado" required>
+                                    <option value="1">Activo</option>
+                                    <option value="2">Inactivo</option>
+                                    <option value="3">Bloqueado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Modificar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 @section Scripts {
     <script src="~/plugins/datatables/jquery.dataTables.min.js"></script>

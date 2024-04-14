@@ -77,5 +77,23 @@ public class Modelo
             return null;
         }
     }
+    public OleDbDataReader Llenar(string tabla, string campo)
+    {
+        BaseDatos com = new BaseDatos(); //Instanciando a la clase BaseDatos
+
+        try
+        {
+            var query = "SELECT * FROM " + tabla + " WHERE id_estado = '1' ORDER BY " + campo + " ASC";
+
+            com.Conectar();
+            com.CrearComando(query);
+            return com.EjecutarConsulta();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al ejecutar consulta: " + ex.Message);
+            return null;
+        }
+    }
 
 }

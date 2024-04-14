@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
+using Biblioteca.Library;
 
 namespace Biblioteca.Controllers
 {
@@ -10,7 +12,7 @@ namespace Biblioteca.Controllers
         {
             Modelo query = new Modelo();
             ViewBag.query = query.BuscarTodo("Vista_Usuarios");
-
+            ViewBag.roles = new HtmlString(MyLib.llenar("rol","id_rol","rol","id_rol","id_rol"));
             return View();
         }
 
@@ -46,11 +48,17 @@ namespace Biblioteca.Controllers
             try
             {
                 com.Agregar("usuario", datos);
-                ViewBag.msg = "El registro ha sido agregado con éxito";
+                ViewBag.msg = new HtmlString(@"<div class=""alert alert-success alert-dismissible fade show col-8 text-center"">
+                        <button type=""button"" class=""close"" data-dismiss=""alert"">&times;</button>
+                        <i class=""icon fas fa-check""></i>El registro ha sido ingresado con éxito.
+                        </div>");
             }
             catch
             {
-                ViewBag.msg = "Error al procesar los datos";
+                ViewBag.msg = new HtmlString(@"<div class=""alert alert-danger alert-dismissible fade show col-8 text-center"">
+                        <button type=""button"" class=""close"" data-dismiss=""alert"">&times;</button>
+                        <i class=""icon fas fa-times-circle""></i>Error al procesar los datos.
+                        </div>");
             }
 
             ViewBag.query = com.BuscarTodo("Vista_Usuarios");

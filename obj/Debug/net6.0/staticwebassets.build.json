@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ayX9iY6xaZojLdVHrK+Gf7t7t+0orcYepCZWxqwyoSw=",
+  "Hash": "2+jPfIYFlKQk76ugZhcyG377MT+3vRsW1tgswe7UzUo=",
   "Source": "Biblioteca",
   "BasePath": "_content/Biblioteca",
   "Mode": "Default",
@@ -775,6 +775,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\wwwroot\\files\\Spanish.json",
+      "SourceId": "Biblioteca",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\wwwroot\\",
+      "BasePath": "_content/Biblioteca",
+      "RelativePath": "files/Spanish.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\Spanish.json"
     },
     {
       "Identity": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\wwwroot\\img\\avatar.png",

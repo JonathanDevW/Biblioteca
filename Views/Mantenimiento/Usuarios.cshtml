@@ -48,8 +48,9 @@
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("correo"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("rol"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("estado"))</td>
-                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModUsuario" role="button" onclick="$('#m_id_usuario').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")));modUsuario(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModUsuario" role="button" onclick="$('#m_id_usuario').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")));ModUsuario(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
                                 <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#RestContrasena" role="button" onclick="$('#id_usuario_r').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Reiniciar contraseña" style="width:25px"><i class="fas fa-lock"></i></a></td>
+
                             </tr>
                         }
                     </tbody>

@@ -96,6 +96,26 @@ public class Modelo
         }
     }
 
+    public OleDbDataReader Mostrar(string tabla, string id_usuario)
+    {
+        BaseDatos com = new BaseDatos(); //Instanciando a la clase BaseDatos
+
+        try
+        {
+            var query = "SELECT * FROM " + tabla + " WHERE id_estado = " + id_usuario;
+
+            com.Conectar();
+            com.CrearComando(query);
+            return com.EjecutarConsulta();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al ejecutar consulta: " + ex.Message);
+            return null;
+        }
+    }
+
+
     public void Actualizar(string tabla, string[] datos, string idUsuario)
     {
         BaseDatos com = new BaseDatos(); // Instancia a la base de datos

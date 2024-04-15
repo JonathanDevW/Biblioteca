@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PD32keUXdjcowk6cvL31DCq3ZrhokdaHEZG6jp+/1ih+EETkzDXYDK/tsnHDQ8QHwK+qYESY5Dm+JvxmIYjM1w==",
+  "dgSpecHash": "j8wF2f9vl/+QBgDgHupxFSCeZjiUYVd+g65rbMUOEbITD1bsU6T/7qMgBWh/ypUilCizLcJ/M3hkhAf0obxsiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\raque\\Source\\Repos\\Biblioteca\\Biblioteca.csproj",
+  "projectFilePath": "C:\\Users\\raque\\source\\repos\\Biblioteca\\Biblioteca.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\raque\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\raque\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

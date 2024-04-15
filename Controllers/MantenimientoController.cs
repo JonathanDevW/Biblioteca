@@ -145,7 +145,7 @@ namespace Biblioteca.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult ModUsuario()
         {
-            string idUsuario = Request.Form["id_usuario_r"];
+            string idUsuario = Request.Form["m_id_usuario"];
             string m_usuario = Request.Form["m_usuario"];
             string m_nombre = Request.Form["m_nombre"];
             string m_email = Request.Form["m_email"];
@@ -157,7 +157,7 @@ namespace Biblioteca.Controllers
             try
             {
 
-                string[] datos = { "m_usuario:" + m_usuario, "m_nombre:" + m_nombre,"m_email:" + m_email, "rol:" + m_rol, "m_estado:" + m_estado };
+                string[] datos = { "nickname:" + m_usuario, "nombre:" + m_nombre,"correo:" + m_email, "id_rol:" + m_rol, "id_estado:" + m_estado };
 
                 com.Actualizar("usuario", datos, idUsuario);
 

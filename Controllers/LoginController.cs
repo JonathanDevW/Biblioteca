@@ -41,6 +41,7 @@ namespace Biblioteca.Controllers
             {
                 if (q.Read())
                 {
+
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, q.GetString("nickname")),

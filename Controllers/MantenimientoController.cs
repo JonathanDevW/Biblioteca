@@ -13,7 +13,7 @@ namespace Biblioteca.Controllers
         {
             Modelo query = new Modelo();
             ViewBag.query = query.BuscarTodo("Vista_Usuarios");
-            ViewBag.roles = new HtmlString(MyLib.llenar("rol", "id_rol", "rol", "id_rol", "id_rol"));
+            ViewBag.roles = new HtmlString(MyLib.llenar("rol", "id_rol","id_rol","rol","id_rol"));
             return View();
         }
 

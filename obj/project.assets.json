@@ -10713,19 +10713,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\raque\\.nuget\\packages\\": {}
+    "C:\\Users\\Jonathan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\raque\\Source\\Repos\\Biblioteca\\Biblioteca.csproj",
+      "projectUniqueName": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Biblioteca.csproj",
       "projectName": "Biblioteca",
-      "projectPath": "C:\\Users\\raque\\Source\\Repos\\Biblioteca\\Biblioteca.csproj",
-      "packagesPath": "C:\\Users\\raque\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\raque\\Source\\Repos\\Biblioteca\\obj\\",
+      "projectPath": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Biblioteca.csproj",
+      "packagesPath": "C:\\Users\\Jonathan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\raque\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jonathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10745,6 +10745,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10787,7 +10792,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

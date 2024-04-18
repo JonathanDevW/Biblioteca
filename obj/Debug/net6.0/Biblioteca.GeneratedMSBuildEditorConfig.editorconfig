@@ -9,99 +9,99 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Biblioteca
 build_property.RootNamespace = Biblioteca
-build_property.ProjectDir = C:\Users\raque\source\repos\Biblioteca\
+build_property.ProjectDir = C:\Users\Jonathan\Desktop\Biblioteca\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\raque\source\repos\Biblioteca
+build_property.MSBuildProjectDirectory = C:\Users\Jonathan\Desktop\Biblioteca
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Catalogo/Categorias.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Catalogo/Categorias.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ29cQ2F0ZWdvcmlhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Catalogo/Libros.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Catalogo/Libros.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ29cTGlicm9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Home/Acercade.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Home/Acercade.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2VyY2FkZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Home/Dashboard.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Home/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Home/Index.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Home/lista.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Home/lista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsaXN0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Login/Index.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Login/NewPassword.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Login/NewPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTmV3UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Login/Recuperacion.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Login/Recuperacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVjdXBlcmFjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Login/Registro.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Login/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0cm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Mantenimiento/Estados.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Mantenimiento/Estados.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xFc3RhZG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Mantenimiento/Roles.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Mantenimiento/Roles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xSb2xlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Mantenimiento/Usuarios.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Mantenimiento/Usuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xVc3Vhcmlvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Movimientos/Prestamos.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Movimientos/Prestamos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1pZW50b3NcUHJlc3RhbW9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Shared/Base.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Shared/Base.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJhc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Shared/Error.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Shared/_menuAdmin.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Shared/_menuAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9tZW51QWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Shared/_menuOperador.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Shared/_menuOperador.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9tZW51T3BlcmFkb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/_ViewImports.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/_ViewStart.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/raque/source/repos/Biblioteca/Views/Shared/_Layout.cshtml]
+[C:/Users/Jonathan/Desktop/Biblioteca/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bunr9m1pqn

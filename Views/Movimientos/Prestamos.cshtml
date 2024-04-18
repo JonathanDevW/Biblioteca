@@ -98,13 +98,13 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="password">Categoria</label>
-                                <input class="form-control" id="categoria" name="nombre" type="text" required />
+                                <select autofocus class="form-control" id="rol" name="rol" required>
+                                    @Html.Raw(ViewBag.categoria)
+                                </select>
                             </div>
                                 <label for="estado">Estado</label>
                                 <select class="form-control" id="estado" name="estado" required>
-                                    <option value="1">Activo</option>
-                                    <option value="2">Inactivo</option>
-                                    <option value="3">Bloqueado</option>
+                                @Html.Raw(ViewBag.librosEstados)
                                 </select>
                             </div>
                          </div>

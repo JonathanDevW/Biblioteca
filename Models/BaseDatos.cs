@@ -16,7 +16,17 @@ public class BaseDatos
 
     private void Configurar()
     {
-        cadenaConexion = "Provider = sqloledb; Data Source = LAPTOP-HQGAUREL; Initial Catalog = SisBibliotecario; User Id = sa; Password = uma;";
+
+        /*Datos de servidores*/
+        string JonaServer = "DESKTOP-LH3NL7T";
+        string RaquelServer = "LAPTOP-HQGAUREL";
+        /*Datos de la cadena conexion*/
+        string dataBase = "SisBibliotecario";
+        string userId = "sa";
+        string passConnection = "uma";
+
+        /*Creando cadena conexion*/
+        cadenaConexion = "Provider = sqloledb; Data Source = " + JonaServer + "; Initial Catalog = " + dataBase + "; User Id = " + userId + "; Password = " + passConnection + ";";
         conexion = new OleDbConnection(cadenaConexion);
     }
 

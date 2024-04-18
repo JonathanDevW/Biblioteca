@@ -1,4 +1,6 @@
 ﻿using Azure.Core;
+using Biblioteca.Library;
+using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Biblioteca.Controllers
@@ -9,7 +11,9 @@ namespace Biblioteca.Controllers
         {
             Modelo query = new Modelo();
             ViewBag.query = query.BuscarTodo("Vista_Prestamos");
-
+            ViewBag.roles = new HtmlString(MyLib.llenar("categoria", "id_categoria", "id_categoria", "nombre", "id_categoria"));
+            ViewBag.librosEstados = new HtmlString(MyLib.llenar("librosEstado", "id_libroEstado", "id_libroEstado", "estado_libro", "id_libroEstado"));
+            
             return View();
         }
 

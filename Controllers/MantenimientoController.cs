@@ -13,11 +13,29 @@ namespace Biblioteca.Controllers
         {
             Modelo query = new Modelo();
             ViewBag.query = query.BuscarTodo("Vista_Usuarios");
-            ViewBag.roles = new HtmlString(MyLib.llenar("rol", "id_rol","id_rol","rol","id_rol"));
+            ViewBag.roles = new HtmlString(MyLib.llenar("rol", "id_rol","rol","rol","id_rol"));
+            ViewBag.persona = new HtmlString(MyLib.llenar("persona", "id_persona", "primer_nombre", "id_persona", "primer_nombre"));
+            return View();
+        }
+        public IActionResult Persona()
+        {
+            Modelo query = new Modelo();
+            ViewBag.query = query.BuscarTodo("Vista_Personas");
+            return View();
+        }
+        public IActionResult Carreras()
+        {
+            Modelo query = new Modelo();
+            ViewBag.query = query.BuscarTodo("Vista_Carreras");
             return View();
         }
 
-
+        public IActionResult Facultades()
+        {
+            Modelo query = new Modelo();
+            ViewBag.query = query.BuscarTodo("Vista_Facultades");
+            return View();
+        }
         public IActionResult Roles()
         {
             Modelo query = new Modelo();
@@ -40,12 +58,12 @@ namespace Biblioteca.Controllers
         {
             string nickname = Request.Form["usuario"];
             string password = Request.Form["password"];
-            string nombre = Request.Form["nomCom"];
             string correo = Request.Form["correo"];
             string rol = Request.Form["rol"];
             string estado = Request.Form["estado"];
+            string persona = Request.Form["persona"];
 
-            string[] datos = { "nickname:" + nickname, "password:" + password, "nombre:" + nombre, "correo:" + correo, "id_rol:" + rol, "id_estado:" + estado };
+            string[] datos = { "nickname:" + nickname, "password:" + password, "correo:" + correo, "id_rol:" + rol, "id_estado:" + estado, "id_persona:" + persona };
             Modelo com = new Modelo();
             try
             {
@@ -64,6 +82,8 @@ namespace Biblioteca.Controllers
             }
 
             ViewBag.query = com.BuscarTodo("Vista_Usuarios");
+            ViewBag.roles = new HtmlString(MyLib.llenar("rol", "id_rol", "rol", "rol", "id_rol"));
+            ViewBag.persona = new HtmlString(MyLib.llenar("persona", "id_persona", "primer_nombre", "id_persona", "primer_nombre"));
             return View("Usuarios");
 
         }
@@ -129,7 +149,7 @@ namespace Biblioteca.Controllers
             Modelo com = new Modelo();
             try
             {
-                com.Actualizar("usuario", datos, idUsuario);
+                com.Actualizar("usuario", datos, r_password, idUsuario);
                 ViewBag.msg = "La contraseña ha sido restablecida con éxito";
             }
             catch (Exception ex)
@@ -145,21 +165,23 @@ namespace Biblioteca.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult ModUsuario()
         {
+
             string idUsuario = Request.Form["m_id_usuario"];
             string m_usuario = Request.Form["m_usuario"];
-            string m_nombre = Request.Form["m_nombre"];
             string m_email = Request.Form["m_email"];
             string m_rol = Request.Form["rol"];
             string m_estado = Request.Form["m_estado"];
+            string m_id_persona = Request.Form["m_persona"];
 
             Modelo com = new Modelo();
 
             try
             {
 
-                string[] datos = { "nickname:" + m_usuario, "nombre:" + m_nombre,"correo:" + m_email, "id_rol:" + m_rol, "id_estado:" + m_estado };
+                string[] datos = { "nickname:" + m_usuario, "correo:" + m_email, "id_rol:" + m_rol, "id_estado:" + m_estado, "id_persona:" + m_id_persona };
 
-                com.Actualizar("usuario", datos, idUsuario);
+
+                com.Actualizar("usuario", datos, "id_usuario", idUsuario);
 
                 ViewBag.msg = "Los datos han sido actualizados con éxito";
             }
@@ -168,12 +190,41 @@ namespace Biblioteca.Controllers
                 ViewBag.msg = "Error al actualizar datos: " + ex.Message;
             }
 
+
             ViewBag.query = com.BuscarTodo("Vista_Usuarios");
+            ViewBag.roles = new HtmlString(MyLib.llenar("rol", "id_rol", "rol", "rol", "id_rol"));
+            ViewBag.persona = new HtmlString(MyLib.llenar("persona", "id_persona", "primer_nombre", "id_persona", "primer_nombre"));
+
             return View("Usuarios");
 
 
         }
-    }
 
+        public IActionResult ObtenerUser(string tabla, string id)
+        {
+
+            Modelo query = new Modelo();
+            var usuario = query.ObtenerUser(tabla, id);
+
+            if (usuario != null && usuario.Read())
+            {
+                var user = new
+                {
+                    nickname = usuario["nickname"].ToString(),
+                    correo = usuario["correo"].ToString(),
+                    id_rol = usuario["id_rol"].ToString(),
+                    id_estado = usuario["id_estado"].ToString(),
+                    persona = usuario["id_persona"].ToString()
+                };
+
+                return Json(user);
+
+            }
+            else
+            {
+                return Json(null);
+            }
+        }
+    }
 
 }

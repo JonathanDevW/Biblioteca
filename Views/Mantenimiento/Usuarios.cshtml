@@ -31,10 +31,10 @@
                     <thead>
                         <tr>
                             <th>Usuario</th>
-                            <th>Nombre</th>
                             <th>Correo</th>
                             <th>Rol</th>
                             <th>Estado</th>
+                            <th>Persona</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -44,11 +44,11 @@
                         {
                             <tr>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("nickname"))</td>
-                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("nombre"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("correo"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("rol"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("estado"))</td>
-                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModUsuario" role="button" onclick="$('#m_id_usuario').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")));ModUsuario(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
+                                <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("primer_nombre"))</td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModUsuario" role="button" onclick="$('#m_id_usuario').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario"))); cargarDetalleUsuario(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")));" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
                                 <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#RestContrasena" role="button" onclick="$('#id_usuario_r').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_usuario")))" data-placement="top" title="Reiniciar contraseña" style="width:25px"><i class="fas fa-lock"></i></a></td>
 
                             </tr>
@@ -82,15 +82,11 @@
                         <div class="form-row">
                             <div class="col-md-6">
                                 <label for="usuario">Usuario</label>
-                                <input autofocus class="form-control" id="usuario" name="usuario" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
+                                <input autofocus class="form-control" id="usuario" name="usuario" type="text" required/>
                             </div>
                             <div class="col-md-6">
                                 <label for="password">Contraseña</label>
                                 <input class="form-control" id="password" name="password" type="text" required />
-                            </div>
-                            <div class="col-md-6">
-                                <label for="nombrecompleto">Nombre Completo</label>
-                                <input autofocus class="form-control" id="nomcom" name="nomCom" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
                             </div>
                             <div class="col-md-6">
                                 <label for="correo">Correo</label>
@@ -110,7 +106,12 @@
                                     <option value="3">Bloqueado</option>
                                 </select>
                             </div>
-
+                            <div class="col-md-6">
+                                <label for="rol">Persona</label>
+                                <select autofocus class="form-control" id="persona" name="persona" required>
+                                    @Html.Raw(ViewBag.persona)
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,7 +170,7 @@
             <form method="POST" asp-controller="Mantenimiento" asp-action="ModUsuario">
                 @Html.AntiForgeryToken()
                 <div class="modal-header">
-                    <h5 class="modal-title">Modificar Usaurio</h5>
+                    <h5 class="modal-title">Modificar Usuario</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -181,10 +182,6 @@
                             <div class="col-md-12">
                                 <label for="password_r">Usuario</label>
                                 <input autofocus class="form-control" id="m_usuario" name="m_usuario" type="text" required />
-                            </div>
-                            <div class="col-md-12">
-                                <label for="password_r">Nombre</label>
-                                <input autofocus class="form-control" id="m_nombre" name="m_nombre" type="text" required />
                             </div>
                             <div class="col-md-12">
                                 <label for="password_r">Correo Electronico</label>
@@ -204,6 +201,12 @@
                                     <option value="3">Bloqueado</option>
                                 </select>
                             </div>
+                            <div class="col-md-6">
+                                <label for="rol">Persona</label>
+                                <select autofocus class="form-control" id="m_persona" name="m_persona" required>
+                                    @Html.Raw(ViewBag.persona)
+                                </select>
+                            </div>      
                         </div>
                     </div>
                 </div>
@@ -233,4 +236,32 @@
     <script src="~/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="~/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <script src="~/js/dataTable.js"></script>
+    <script src="~/js/ajaxMantenimiento.js"></script>
+
+    <script>
+
+        function cargarDetalleUsuario(id_usuario) {
+            // Hacer una llamada AJAX para obtener los detalles del usuario
+            $.ajax({
+                url: '@Url.Action("ObtenerUser", "Mantenimiento")',
+                type: 'GET',
+                data: { tabla: 'usuario', id: id_usuario },
+                success: function (data) {
+                    // Rellenar los campos del modal con los datos del usuario
+                    $('#m_usuario').val(data.nickname);
+                    $('#m_email').val(data.correo);
+                    $("#m_rol option[value='" + data.id_rol + "']").attr("selected", true);
+                    $("#m_estado option[value='" + data.id_estado + "']").attr("selected", true);
+                    $("#m_persona option[value='" + data.persona + "']").attr("selected", true);
+
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+
+            });
+        }
+
+    </script>
 }
+

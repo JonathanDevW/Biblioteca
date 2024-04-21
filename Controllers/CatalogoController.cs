@@ -4,6 +4,14 @@ namespace Biblioteca.Controllers
 {
     public class CatalogoController : Controller
     {
+        private readonly IWebHostEnvironment _entornoWeb;
+
+        public CatalogoController(IWebHostEnvironment entornoWeb)
+        {
+            _entornoWeb = entornoWeb;
+        }
+
+
         public IActionResult Libros()
         {
             Modelo query = new Modelo();
@@ -18,16 +26,27 @@ namespace Biblioteca.Controllers
             return View();
         }
 
-        public IActionResult AgregarLibro()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> agregarLibro()
         {
             string titulo = Request.Form["titulo"];
             string autor = Request.Form["autor"];
             string isbn = Request.Form["isbn"];
-            string anio_publi = Request.Form["anio_publicacion"];
-            string ejem = Request.Form["ejemplares_disponibles"];
-            string categoria = Request.Form["nombre"];
-
-            string[] datos = { "titulo:" + titulo, "autor:" + autor, "isbn:" + isbn, "anio_publicacion:" + anio_publi, "ejemplares_disponibles:" + ejem, "id_categoria:" + categoria };
+            string anio_publicacion = Request.Form["anio_publicacion"];
+            string ejemDisp = Request.Form["ejemplares_disponibles"];
+            string categoria = Request.Form["categoria"];
+            var archivo = HttpContext.Request.Form.Files;
+            if (archivo != null && archivo.Count > 0)
+            {
+                string ruta = _entornoWeb.WebRootPath + "\\img\\Libros\\" + isbn + Path.GetExtension(archivo[0].FileName);
+                using (var flujoArchivo = new FileStream(ruta, FileMode.Create))
+                {
+                    await archivo[0].CopyToAsync(flujoArchivo);
+                }
+            }
+            string[] datos = { "titulo:" + titulo, "autor:" + autor, "isbn:" + isbn, "anio_publicacion:" + anio_publicacion, "ejemplares_disponibles:" + ejemDisp, "id_categoria:" + categoria, "portada:" + isbn + Path.GetExtension(archivo[0].FileName) };
             Modelo com = new Modelo();
             try
             {
@@ -41,7 +60,34 @@ namespace Biblioteca.Controllers
 
             ViewBag.query = com.BuscarTodo("Vista_Libros");
             return View("Libros");
+        }
 
+        public IActionResult ObtenerLibro(string tabla, string id)
+        {
+
+            Modelo query = new Modelo();
+            var libro = query.ObtenerLibro(tabla, id);
+
+            if (libro != null && libro.Read())
+            {
+                var lib = new
+                {
+                    titulo = libro["titulo"].ToString(),
+                    autor = libro["autor"].ToString(),
+                    isbn = libro["isbn"].ToString(),
+                    anio_publicacion = libro["anio_publicacion"].ToString(),
+                    ejemplares_disponibles = libro["ejemplares_disponibles"].ToString(),
+                    categoria = libro["id_categoria"].ToString(),
+                    portada = libro["portada"].ToString()
+                };
+
+                return Json(lib);
+
+            }
+            else
+            {
+                return Json(null);
+            }
         }
 
         [HttpPost]

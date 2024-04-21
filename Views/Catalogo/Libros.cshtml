@@ -22,7 +22,7 @@
 <section class="content">
     <div class="card">
         <div class="card-header bg-primary">
-            <h3 class="card-title">Agregar libro&nbsp&nbsp</h3><a data-toggle="modal" data-target="#AddReaderModal" role="button"><i class="fas fa-plus-circle"></i></a>
+            <h3 class="card-title">Agregar libro&nbsp&nbsp</h3><a data-toggle="modal" data-target="#AgregarLibro" role="button"><i class="fas fa-plus-circle"></i></a>
         </div>
         <div class="card-body row">
             <div class="table-responsive px-2">
@@ -49,7 +49,9 @@
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("anio_publicacion"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("ejemplares_disponibles"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("nombre"))</td>
-                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modificarModal" role="button" onclick="modUser()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
+                                @*                                 <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModificarLibro" role="button" onclick="modUser()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>*@
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#AgregarLibro" role="button" onclick="$('#m_id_libro').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_libro"))); cargarDetalleLibro(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_libro")));" data-placement="top" title="Modificar datos del Libro" style="width:25px"><i class="fas fa-pen"></i></a></td>
+
                             </tr>
                         }
                     </tbody>
@@ -62,14 +64,14 @@
     </div>
 </section>
 
-<div class="modal fade" id="AddReaderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="AgregarLibro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
 
         <div class="modal-content">
-            <form method="POST" asp-controller="Catalogo" asp-action="AgregarLibro">
+            <form method="POST" asp-controller="Catalogo" asp-action="AgregarLibro" enctype="multipart/form-data">
                 @Html.AntiForgeryToken()
                 <div class="modal-header">
-                    <h5 class="modal-title">Agregar Lector</h5>
+                    <h5 class="modal-title">Agregar Libro</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -78,8 +80,14 @@
                     <!-- Campos -->
                     <div class="form-group">
                         <div class="form-row">
+                            <div class="col-md-12">
+                                <label for="portada">Portada</label>
+                                <input type="file" id="portada" name="portada" required />
+                            </div>
+                            <div>
+                            </div>
                             <div class="col-md-6">
-                                <label for="usuario">Titulo</label>
+                                <label for="titulo">Titulo</label>
                                 <input autofocus class="form-control" id="titulo" name="titulo" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
                             </div>
                             <div class="col-md-6">
@@ -91,16 +99,16 @@
                                 <input autofocus class="form-control" id="isbn" name="isbn" type="text" style="text-transform: lowercase;" placeholder="ejemplo: japerez" required />
                             </div>
                             <div class="col-md-6">
-                                <label for="correo">Año de publicación</label>
-                                <input class="form-control" id="anio_ublicacion" name="anio_publicacion" type="text" required />
+                                <label for="anio_publicacion">Año de publicación</label>
+                                <input class="form-control" id="anio_publicacion" name="anio_publicacion" type="text" required />
                             </div>
                             <div class="col-md-6">
-                                <label for="ejem">Número de ejemplares</label>
-                                <input class="form-control" id="correo" name="ejemplares_disponibles" type="text" required />
+                                <label for="ejemDisp">Número de ejemplares</label>
+                                <input class="form-control" id="ejemDisp" name="ejemDisp" type="text" required />
                             </div>
                             <div class="col-md-6">
-                                <label for="rol">Categoria</label>
-                                <select autofocus class="form-control" id="rol" name="nombre" required>
+                                <label for="categoria">Categoria</label>
+                                <select autofocus class="form-control" id="categoria" name="categoria" required>
                                     <option value="1">Informatica</option>
                                     <option value="2">Contabilidad</option>
                                     <option value="5">Jurisprudencia</option>
@@ -115,6 +123,8 @@
                 </div>
                 <div id="result">
                 </div>
+                <input type="hidden" name="m_id_libro" id="m_id_libro" />
+
             </form>
         </div>
     </div>
@@ -134,4 +144,6 @@
     <script src="~/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="~/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <script src="~/js/dataTable.js"></script>
+    <script src="~/js/ajaxMantenimiento.js" asp-append-version="true"></script>
+
 }

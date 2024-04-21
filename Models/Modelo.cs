@@ -1,6 +1,7 @@
 ﻿using Azure.Core;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.OleDb;
+using System.Diagnostics;
 
 /// <summary>
 /// Contiene los metodos para el matenimiento de las tablas
@@ -116,49 +117,76 @@ public class Modelo
     }
 
 
-    public void Actualizar(string tabla, string[] datos, string idUsuario)
+    public void Actualizar(string tabla, string[] datos, string campo, string valor)
     {
-        BaseDatos com = new BaseDatos(); // Instancia a la base de datos
-        com.Conectar(); // Se conecta a la instancia
-        string sql = "UPDATE " + tabla + " SET "; // Query de actualización
-
+        BaseDatos com = new BaseDatos();
+        com.Conectar();
+        string sql = "UPDATE " + tabla + " SET ";
         foreach (string data1 in datos)
         {
-            string[] partes = data1.Split(':');
-            sql += partes[0] + " = '" + partes[1] + "', ";
+            sql += data1.Split(":")[0] + " = '" + data1.Split(":")[1] + "', ";
         }
-        sql = sql.Substring(0, sql.Length - 2);
-
-        // Agregar cláusula WHERE para actualizar solo el usuario específico
-        sql += " WHERE id_usuario = '" + idUsuario + "'";
-
+        sql = sql.Substring(0, sql.Length - 2) + " WHERE " + campo + " = '" + valor + "';";
+        Debug.WriteLine(sql);
         com.CrearComando(sql);
-        // Debug.WriteLine(sql);
         com.EjecutarComando();
         com.Desconectar();
     }
 
-
-    public void BloquearUsuario(string tabla, string[] datos, string idUsuario)
+    public OleDbDataReader ObtenerUser(string tabla, string id)
     {
-        BaseDatos com = new BaseDatos(); // Instancia a la base de datos
-        com.Conectar(); // Se conecta a la instancia
-        string sql = "UPDATE " + tabla + " SET "; // Query de actualización
+        BaseDatos com = new BaseDatos();
 
-        foreach (string data1 in datos)
+        try
         {
-            string[] partes = data1.Split(':');
-            sql += partes[0] + " = '" + partes[1] + "', ";
+            com.Conectar();
+            com.CrearComando("SELECT * FROM " + tabla + " WHERE id_usuario= " + id);
+            return com.EjecutarConsulta();
         }
-        sql = sql.Substring(0, sql.Length - 2);
-
-        // Agregar cláusula WHERE para actualizar solo el usuario específico
-        sql += " WHERE id_usuario = '" + idUsuario + "'";
-
-        com.CrearComando(sql);
-        // Debug.WriteLine(sql);
-        com.EjecutarComando();
-        com.Desconectar();
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al ejecutar consulta: " + ex.Message);
+            return null;
+        }
     }
+    public OleDbDataReader ObtenerLibro(string tabla, string id)
+    {
+        BaseDatos com = new BaseDatos();
+
+        try
+        {
+            com.Conectar();
+            com.CrearComando("SELECT * FROM " + tabla + " WHERE id_libro= " + id);
+            return com.EjecutarConsulta();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al ejecutar consulta: " + ex.Message);
+            return null;
+        }
+    }
+
+
+    //public void BloquearUsuario(string tabla, string[] datos, string idUsuario)
+    //{
+    //    BaseDatos com = new BaseDatos(); // Instancia a la base de datos
+    //    com.Conectar(); // Se conecta a la instancia
+    //    string sql = "UPDATE " + tabla + " SET "; // Query de actualización
+
+    //    foreach (string data1 in datos)
+    //    {
+    //        string[] partes = data1.Split(':');
+    //        sql += partes[0] + " = '" + partes[1] + "', ";
+    //    }
+    //    sql = sql.Substring(0, sql.Length - 2);
+
+    //    // Agregar cláusula WHERE para actualizar solo el usuario específico
+    //    sql += " WHERE id_usuario = '" + idUsuario + "'";
+
+    //    com.CrearComando(sql);
+    //    // Debug.WriteLine(sql);
+    //    com.EjecutarComando();
+    //    com.Desconectar();
+    //}
 
 }

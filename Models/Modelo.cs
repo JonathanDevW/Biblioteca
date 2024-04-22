@@ -27,7 +27,7 @@ public class Modelo
 
         try
         {
-            var query = "SELECT * FROM usuario WHERE id_estado = '1' AND nickname = '" + nickname + "' AND password = '" + password + "';";
+            var query = "SELECT * FROM usuario WHERE nickname = '" + nickname + "' AND password = '" + password + "';";
 
             com.Conectar();
             com.CrearComando(query);

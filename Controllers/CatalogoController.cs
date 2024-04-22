@@ -46,7 +46,7 @@ namespace Biblioteca.Controllers
                     await archivo[0].CopyToAsync(flujoArchivo);
                 }
             }
-            string[] datos = { "titulo:" + titulo, "autor:" + autor, "isbn:" + isbn, "anio_publicacion:" + anio_publicacion, "ejemplares_disponibles:" + ejemDisp, "id_categoria:" + categoria, "portada:" + isbn + Path.GetExtension(archivo[0].FileName) };
+            string[] datos = { "titulo:" + titulo, "autor:" + autor, "isbn:" + isbn, "anio_publicacion:" + anio_publicacion, "ejemplares_disponibles:" + ejemDisp, "id_categoria:" + categoria, "logo:" + isbn + Path.GetExtension(archivo[0].FileName) };
             Modelo com = new Modelo();
             try
             {

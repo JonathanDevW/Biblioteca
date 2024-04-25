@@ -72,13 +72,14 @@ namespace Biblioteca.Controllers
             {
                 var lib = new
                 {
+                    id_libro = libro["id_libro"].ToString(),
                     titulo = libro["titulo"].ToString(),
                     autor = libro["autor"].ToString(),
                     isbn = libro["isbn"].ToString(),
                     anio_publicacion = libro["anio_publicacion"].ToString(),
                     ejemplares_disponibles = libro["ejemplares_disponibles"].ToString(),
                     categoria = libro["id_categoria"].ToString(),
-                    portada = libro["portada"].ToString()
+                    portada = libro["logo"].ToString()
                 };
 
                 return Json(lib);

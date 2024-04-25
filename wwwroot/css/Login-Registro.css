@@ -1,69 +1,73 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+/* Estilos para el modo oscuro */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /*background: #ececec;*/
 }
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: aliceblue;
+/*------------ Login container ------------*/
+.box-area {
+    width: 930px;
+}
+/*------------ Right box ------------*/
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+/*------------ Custom Placeholder ------------*/
+::placeholder {
+    font-size: 16px;
+    color: black;
 }
 
-.my-login-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Tamaño de la ventana */
+.rounded-4 {
+    border-radius: 20px;
 }
 
-.card-wrapper {
-    width: 400px;
-    text-align: center;
+.rounded-5 {
+    border-radius: 30px;
 }
 
-.brand img {
-    width: 200px; /* Tamaño del logo */
-    margin-bottom: 5px;
-}
+/* Estilos para los bordes en modo oscuro */
+/*.my-login-page {*/
+    /* Agrega un color de fondo para el modo oscuro */
+    /*background-color: #1f1f1f;*/ /* Este color debe contrastar con el color del texto */
+    /*color: #fff;*/ /* Color de texto para el modo oscuro */
+/*}*/
 
-.brand h3 {
-    color: black; /* Texto blanco */
-    font-weight: bold;
-    margin: 0;
-}
+/* Ajustes para los bordes en los formularios */
+/*.form-control {
+    border-color: #ddd;*/ /* Color de borde para el modo claro */
+/*}*/
 
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+/* Estilo para el botón de Login */
+/*.btn-primary {
+    background-color: #007bff;*/ /* Color azul para el modo claro */
+    /*border-color: #007bff;
+}*/
 
-.card-body {
-    padding: 30px;
-}
+/* Estilo para el botón Regístrate con Google */
+/*.btn-light {
+    background-color: #f8f9fa;*/ /* Color blanco para el modo claro */
+    /*border-color: #f8f9fa;
+}*/
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-    .form-group label {
-        color: black; /* Texto blanco */
+/* Ajustes para el color del texto en modo oscuro */
+/*.text-secondary {
+    color: #ccc;*/ /* Color de texto secundario en modo oscuro */
+/*}*/
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px) {
+    .box-area {
+        margin: 0 10px;
     }
 
-.form-control {
-    border-radius: 20px; /* Bordes redondeados */
-}
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
 
-.btn-primary {
-    background-color: #007bff; /* Color azul */
-    border: none;
-    border-radius: 20px; /* Bordes redondeados */
-}
-
- .btn-primary:hover {
-        background-color: #0056b3; /* Cambio de color al pasar el ratón */
- }
-
-.footer {
-    margin-top: 20px;
-    color: black; /* Texto blanco */
+    .right-box {
+        padding: 20px;
+    }
 }
 

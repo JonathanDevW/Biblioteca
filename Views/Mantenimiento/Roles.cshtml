@@ -41,7 +41,7 @@
                             <tr>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("rol"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("descripcion"))</td>
-                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModRol" role="button" onclick="modRol()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModRol" role="button" onclick="$('#m_id_rol').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_rol"))); cargarDetalleRol(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_rol")));" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
                             </tr>
                         }
                     </tbody>
@@ -148,7 +148,6 @@
     <script src="~/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <script src="~/js/dataTable.js"></script>
     <script src="~/js/ajaxMantenimiento.js"></script>
-
     <script>
 
         function cargarDetalleRol(id_rol) {
@@ -159,6 +158,7 @@
                 data: { tabla: 'rol', id: id_rol },
                 success: function (data) {
                     // Rellenar los campos del modal con los datos del usuario
+
                     $('#m_rol').val(data.rol);
                     $('#m_descripcion').val(data.descripcion);
 
@@ -172,3 +172,4 @@
 
     </script>
 }
+

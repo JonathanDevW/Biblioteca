@@ -70,7 +70,25 @@ function cargarDetalleRol(id_rol) {
         success: function (data) {
             // Rellenar los campos del modal con los datos del usuario
             $('#m_rol').val(data.rol);
-            $('#m_descripcion').val(data.cdescripcion);
+            $('#m_descripcion').val(data.descripcion);
+        },
+        error: function (xhr, status, error) {
+            console.error(xhr.responseText);
+        }
+
+    });
+}
+
+function cargarDetalleEstado(id_estado) {
+    // Hacer una llamada AJAX para obtener los detalles del usuario
+    $.ajax({
+        url: 'ObtenerEstado',
+        type: 'GET',
+        data: { tabla: 'estado', id: id_estado },
+        success: function (data) {
+            // Rellenar los campos del modal con los datos del usuario
+            $('#m_estado').val(data.estado);
+            $('#m_descripcion').val(data.descripcion);
         },
         error: function (xhr, status, error) {
             console.error(xhr.responseText);

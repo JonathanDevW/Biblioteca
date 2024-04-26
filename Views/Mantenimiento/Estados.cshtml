@@ -41,8 +41,7 @@
                             <tr>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("estado"))</td>
                                 <td>@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("descripcion"))</td>
-                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modificarModal" role="button" onclick="modUser()" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
-                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#passwordModal" role="button" onclick="passUser()" data-placement="top" title="Reiniciar contraseña" style="width:25px"><i class="fas fa-lock"></i></a></td>
+                                <td style="text-align:center"><a class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#ModEstado" role="button" onclick="$('#m_id_estado').val(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_estado"))); cargarDetalleRol(@ViewBag.query.GetValue(ViewBag.query.GetOrdinal("id_estado")));" data-placement="top" title="Modificar datos" style="width:25px"><i class="fas fa-pen"></i></a></td>
                             </tr>
                         }
                     </tbody>
@@ -90,3 +89,85 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal para modificar los datos de un usuario desde Usuario Administrador -->
+<div class="modal fade" id="ModEstado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+            <form method="POST" asp-controller="Mantenimiento" asp-action="ModEstado">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Modificar Estado</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Campos -->
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label for="password_r">Estado</label>
+                                <input autofocus class="form-control" id="m_rol" name="m_estado" type="text" required />
+                            </div>
+                            <div class="col-md-12">
+                                <label for="password_r">Descripcion</label>
+                                <input autofocus class="form-control" id="m_descripcion" name="m_descripcion" type="text" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Modificar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+                <input type="hidden" name="m_id_estado" id="m_id_estado" />
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/plugins/jszip/jszip.min.js"></script>
+    <script src="~/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="~/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="~/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="~/js/dataTable.js"></script>
+    <script src="~/js/ajaxMantenimiento.js"></script>
+    <script>
+
+        function cargarDetalleRol(id_estado) {
+            // Hacer una llamada AJAX para obtener los detalles del usuario
+            $.ajax({
+                url: '@Url.Action("ObtenerEstado", "Mantenimiento")',
+                type: 'GET',
+                data: { tabla: 'estado', id: id_estado },
+                success: function (data) {
+                    // Rellenar los campos del modal con los datos del usuario
+
+                    $('#m_estadp').val(data.estado);
+                    $('#m_descripcion').val(data.descripcion);
+
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+
+            });
+        }
+
+    </script>
+}
+

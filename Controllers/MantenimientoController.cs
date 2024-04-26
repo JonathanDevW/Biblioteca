@@ -226,65 +226,123 @@ namespace Biblioteca.Controllers
                 return Json(null);
             }
         }
-    }
 
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public IActionResult ModRol()
-    {
-
-        string idRol = Request.Form["m_id_rol"];
-        string m_rol = Request.Form["m_rol"];
-        string m_descripcion = Request.Form["m_descripcion"];
-
-
-        Modelo com = new Modelo();
-
-        try
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ModRol()
         {
 
-            string[] datos = { "rol:" + idRol, "descripcion:" + m_rol };
+            string idRol = Request.Form["m_id_rol"];
+            string m_rol = Request.Form["m_rol"];
+            string m_descripcion = Request.Form["m_descripcion"];
 
 
-            com.Actualizar("rol", datos, "id_rol", idRol);
+            Modelo com = new Modelo();
 
-            ViewBag.msg = "Los datos han sido actualizados con éxito";
-        }
-        catch (Exception ex)
-        {
-            ViewBag.msg = "Error al actualizar datos: " + ex.Message;
-        }
-
-
-        ViewBag.query = com.BuscarTodo("Vista_Roles");
-
-        return View("Roles");
-
-
-    }
-
-    public IActionResult ObtenerRol(string tabla, string id)
-    {
-
-        Modelo query = new Modelo();
-        var rol = query.ObtenerUser(tabla, id);
-
-        if (rol != null && rol.Read())
-        {
-            var rolGiven = new
+            try
             {
-                rol = rol["rol"].ToString(),
-                correo = rol["descripcion"].ToString(),
-                id_rol = rol["id_rol"].ToString(),
-            };
 
-            return Json(rolGiven);
+                string[] datos = { "rol:" + m_rol, "descripcion:" + m_descripcion };
+
+                com.Actualizar("rol", datos, "id_rol", idRol);
+
+                ViewBag.msg = "Los datos han sido actualizados con éxito";
+            }
+            catch (Exception ex)
+            {
+                ViewBag.msg = "Error al actualizar datos: " + ex.Message;
+            }
+
+
+            ViewBag.query = com.BuscarTodo("Vista_Roles");
+
+            return View("Roles");
+
 
         }
-        else
+
+        public IActionResult ObtenerRol(string tabla, string id)
         {
-            return Json(null);
+
+            Modelo query = new Modelo();
+            var rol = query.ObtenerUser(tabla, id);
+
+            if (rol != null && rol.Read())
+            {
+                var rolGiven = new
+                {
+                    id_rol = rol["id_rol"].ToString(),
+                    rol = rol["rol"].ToString(),
+                    estados = rol["descripcion"].ToString(),
+                };
+
+                return Json(rolGiven);
+
+            }
+            else
+            {
+                return Json(null);
+            }
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ModEstado()
+        {
+
+            string idEstado = Request.Form["m_id_estado"];
+            string m_estado = Request.Form["m_estado"];
+            string m_descripcion = Request.Form["m_descripcion"];
+
+
+            Modelo com = new Modelo();
+
+            try
+            {
+
+                string[] datos = { "estado:" + m_estado, "descripcion:" + m_descripcion };
+
+                com.Actualizar("estado", datos, "id_estado", idEstado);
+
+                ViewBag.msg = "Los datos han sido actualizados con éxito";
+            }
+            catch (Exception ex)
+            {
+                ViewBag.msg = "Error al actualizar datos: " + ex.Message;
+            }
+
+
+            ViewBag.query = com.BuscarTodo("Vista_Estados");
+
+            return View("Estados");
+
+
+        }
+
+        public IActionResult ObtenerEstados(string tabla, string id)
+        {
+
+            Modelo query = new Modelo();
+            var estados = query.ObtenerUser(tabla, id);
+
+            if (estados != null && estados.Read())
+            {
+                var estadosGiven = new
+                {
+                    id_estados = estados["id_estados"].ToString(),
+                    estados = estados["estados"].ToString(),
+                    descripcion = estados["descripcion"].ToString(),
+                };
+
+                return Json(estadosGiven);
+
+            }
+            else
+            {
+                return Json(null);
+            }
+        }
+
     }
 
 }

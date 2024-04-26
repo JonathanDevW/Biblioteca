@@ -61,6 +61,24 @@ function cargarDetalleUsuario(id_usuario) {
     });
 }
 
+function cargarDetalleRol(id_rol) {
+    // Hacer una llamada AJAX para obtener los detalles del usuario
+    $.ajax({
+        url: 'ObtenerRol',
+        type: 'GET',
+        data: { tabla: 'rol', id: id_rol },
+        success: function (data) {
+            // Rellenar los campos del modal con los datos del usuario
+            $('#m_rol').val(data.rol);
+            $('#m_descripcion').val(data.cdescripcion);
+        },
+        error: function (xhr, status, error) {
+            console.error(xhr.responseText);
+        }
+
+    });
+}
+
 function cargarDetalleLibro(id_libro) {
     // Hacer una llamada AJAX para obtener los detalles del usuario
     $.ajax({

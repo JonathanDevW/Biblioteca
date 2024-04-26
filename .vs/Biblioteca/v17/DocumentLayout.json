@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\controllers\\mantenimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:controllers\\mantenimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\wwwroot\\js\\ajaxmantenimiento.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:wwwroot\\js\\ajaxmantenimiento.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\mantenimiento\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\mantenimiento\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\mantenimiento\\roles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\mantenimiento\\roles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\shared\\_menuadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\shared\\_menuadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,6 +29,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\login\\recuperacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:views\\login\\recuperacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\models\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|solutionrelative:models\\basedatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65279C81-DCD2-4AF2-B08E-2BAA3BE08CD0}|Biblioteca.csproj|c:\\users\\jonathan\\desktop\\biblioteca\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -26,37 +46,100 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ajaxMantenimiento.js",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\wwwroot\\js\\ajaxMantenimiento.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\ajaxMantenimiento.js",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\wwwroot\\js\\ajaxMantenimiento.js",
+              "RelativeToolTip": "wwwroot\\js\\ajaxMantenimiento.js",
+              "ViewState": "AQIAADwAAAAAAAAAAAAswEQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-25T03:19:00.095Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MantenimientoController.cs",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MantenimientoController.cs",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Controllers\\MantenimientoController.cs",
+              "RelativeToolTip": "Controllers\\MantenimientoController.cs",
+              "ViewState": "AQIAAPQAAAAAAAAAAAAAAPwAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T03:09:17.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Roles.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Roles.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mantenimiento\\Roles.cshtml",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Roles.cshtml",
+              "RelativeToolTip": "Views\\Mantenimiento\\Roles.cshtml",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAAAKEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-25T03:04:21.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Usuarios.cshtml",
+              "RelativeDocumentMoniker": "Views\\Mantenimiento\\Usuarios.cshtml",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Mantenimiento\\Usuarios.cshtml",
+              "RelativeToolTip": "Views\\Mantenimiento\\Usuarios.cshtml",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAAAKQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-25T03:04:16.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseDatos.cs",
+              "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\BaseDatos.cs",
+              "RelativeDocumentMoniker": "Models\\BaseDatos.cs",
+              "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Models\\BaseDatos.cs",
+              "RelativeToolTip": "Models\\BaseDatos.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAAB0AAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:58:51.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "_menuAdmin.cshtml",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Shared\\_menuAdmin.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_menuAdmin.cshtml",
               "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Shared\\_menuAdmin.cshtml",
               "RelativeToolTip": "Views\\Shared\\_menuAdmin.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAAMAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-25T18:55:44.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T18:55:44.247Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAABQAAAA5AAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAABQAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-25T18:51:20.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T18:51:20.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Recuperacion.cshtml",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Login\\Recuperacion.cshtml",
               "RelativeDocumentMoniker": "Views\\Login\\Recuperacion.cshtml",
@@ -64,21 +147,19 @@
               "RelativeToolTip": "Views\\Login\\Recuperacion.cshtml",
               "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-25T18:50:34.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T18:50:34.654Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Jonathan\\Desktop\\Biblioteca\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-25T18:44:10.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T18:44:10.653Z"
             }
           ]
         }

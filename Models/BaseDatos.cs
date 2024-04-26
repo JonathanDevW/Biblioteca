@@ -27,7 +27,7 @@ public class BaseDatos
         string passConnection = "uma";
 
         /*Creando cadena conexion*/
-        cadenaConexion = "Provider = sqloledb; Data Source = " + JonaServer + "; Initial Catalog = " + dataBase + "; User Id = " + userId + "; Password = " + passConnection + ";";
+        cadenaConexion = "Provider = sqloledb; Data Source = " + JonaServerHP + "; Initial Catalog = " + dataBase + "; User Id = " + userId + "; Password = " + passConnection + ";";
         conexion = new OleDbConnection(cadenaConexion);
     }
 

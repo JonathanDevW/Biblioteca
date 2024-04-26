@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Biblioteca.Library;
 using static Modelo;
+using Azure.Core;
 
 namespace Biblioteca.Controllers
 {
@@ -224,6 +225,65 @@ namespace Biblioteca.Controllers
             {
                 return Json(null);
             }
+        }
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult ModRol()
+    {
+
+        string idRol = Request.Form["m_id_rol"];
+        string m_rol = Request.Form["m_rol"];
+        string m_descripcion = Request.Form["m_descripcion"];
+
+
+        Modelo com = new Modelo();
+
+        try
+        {
+
+            string[] datos = { "rol:" + idRol, "descripcion:" + m_rol };
+
+
+            com.Actualizar("rol", datos, "id_rol", idRol);
+
+            ViewBag.msg = "Los datos han sido actualizados con éxito";
+        }
+        catch (Exception ex)
+        {
+            ViewBag.msg = "Error al actualizar datos: " + ex.Message;
+        }
+
+
+        ViewBag.query = com.BuscarTodo("Vista_Roles");
+
+        return View("Roles");
+
+
+    }
+
+    public IActionResult ObtenerRol(string tabla, string id)
+    {
+
+        Modelo query = new Modelo();
+        var rol = query.ObtenerUser(tabla, id);
+
+        if (rol != null && rol.Read())
+        {
+            var rolGiven = new
+            {
+                rol = rol["rol"].ToString(),
+                correo = rol["descripcion"].ToString(),
+                id_rol = rol["id_rol"].ToString(),
+            };
+
+            return Json(rolGiven);
+
+        }
+        else
+        {
+            return Json(null);
         }
     }
 

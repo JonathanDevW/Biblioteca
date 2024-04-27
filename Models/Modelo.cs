@@ -27,11 +27,12 @@ public class Modelo
 
         try
         {
-            var query = "SELECT * FROM usuario WHERE nickname = '" + nickname + "' AND password = '" + password + "';";
+            var query = "SELECT * FROM usuario WHERE nickname = '" + nickname + "' AND password = '" + password + "' AND id_estado = 1;";
 
             com.Conectar();
             com.CrearComando(query);
             return com.EjecutarConsulta();
+           
         }
         catch (Exception ex)
         {

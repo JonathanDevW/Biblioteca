@@ -82,6 +82,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 using System.Data;
 using System.Security.Claims;
@@ -133,8 +134,14 @@ namespace Biblioteca.Controllers
                 Modelo query = new Modelo();
                 var q = query.Login(username, password);
 
+
                 if (q != null && q.Read())
                 {
+                    int idEstado = q.GetInt32("id_estado");
+                    if (idEstado != 1)
+                    {
+                        return Json(new { message = "Error! El usuario está bloqueado o no existe." });
+                    }else { 
                     var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, q.GetString("nickname")),
@@ -151,8 +158,10 @@ namespace Biblioteca.Controllers
 
                     // Limpiar los intentos fallidos cuando se inicia sesión correctamente
                     ClearLoginAttemptsCookie();
-
+                    
                     return Json(new { RedirectUrl = Url.Action("Index", "Home") });
+
+                    }
                 }
                 else
                 {
@@ -168,26 +177,30 @@ namespace Biblioteca.Controllers
                     }
                     else
                     {
-                        if (intentosRestantes == 0)
-                        {
-                            // Bloquear usuario
-                            string idUsuario = username;
-                            string idEstadoBloqueado = "bloqueado"; // Obtener el ID del estado bloqueado de tu lógica
-                            BloquearUsuario(idUsuario, idEstadoBloqueado);
 
-                            // Limpiar los intentos fallidos ya que el usuario está bloqueado
-                            ClearLoginAttemptsCookie();
+                        try
+                        {
+                            BaseDatos com = new BaseDatos(); // Instancia a la base de datos
+                            com.Conectar(); // Se conecta a la instancia
+                            string sql = "UPDATE usuario SET id_estado = '" + 3 + "' WHERE nickname = '" + username + "'";
+
+                            com.CrearComando(sql);
+                            com.EjecutarComando();
+                            com.Desconectar();
+
 
                             return Json(new { message = "Error! Demasiados intentos fallidos. El usuario está bloqueado." });
 
+                        } catch (Exception)
+                        {
+                            return null;
                         }
-                        return null;
+
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Manejar la excepción aquí, por ejemplo, registrarla y devolver un error genérico
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error interno del servidor.");
             }
         }
@@ -223,11 +236,12 @@ namespace Biblioteca.Controllers
         {
             BaseDatos com = new BaseDatos(); // Instancia a la base de datos
             com.Conectar(); // Se conecta a la instancia
-            string sql = "UPDATE usuarios SET id_estado = '" + idEstado + "' WHERE id_usuario = '" + idUsuario + "'";
+            string sql = "UPDATE usuario SET id_estado = '" + idEstado + "' WHERE id_usuario = '" + idUsuario + "'";
 
             com.CrearComando(sql);
             com.EjecutarComando();
             com.Desconectar();
+            ClearLoginAttemptsCookie();
         }
 
     }

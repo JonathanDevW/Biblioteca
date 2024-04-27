@@ -1,20 +1,21 @@
 $(document).ready(function () {
     // Función para el inicio de sesión.
+
     $("#loginform").submit(function (e) {
         e.preventDefault();
 
-        // Serializar los datos del formulario a un objeto JSON
+        // Serializa los datos del formulario a un objeto JSON
         var formData = {};
         $(this).serializeArray().forEach(function (item) {
             formData[item.name] = item.value;
         });
 
-        // Convertir el objeto JSON a una cadena JSON
+        // Convierte el objeto JSON a una cadena JSON
         var jData = JSON.stringify(formData);
 
-        // Enviar la solicitud AJAX al controlador Login/Login
+        // Envia la solicitud AJAX al controlador Login/Login
         $.ajax({
-            url: '/Login/Login', // Ruta correcta del controlador en tu aplicación
+            url: '/Login/Login',
             type: 'POST',
             data: jData,
             contentType: "application/json; charset=utf-8",

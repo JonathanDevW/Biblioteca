@@ -27,20 +27,32 @@ public class Modelo
 
         try
         {
-            var query = "SELECT * FROM usuario WHERE nickname = '" + nickname + "' AND password = '" + password + "' AND id_estado = 1;";
+            var query = "SELECT *, CASE WHEN id_estado = 3 THEN 1 ELSE 0 END AS Bloqueado FROM usuario WHERE nickname = " + nickname + " AND " + password + ";";
+
 
             com.Conectar();
             com.CrearComando(query);
-            return com.EjecutarConsulta();
-           
+            //return com.EjecutarConsulta();
+            var datos = com.EjecutarConsulta();
+
+            if (datos.Read())
+            {
+                // Devolver el OleDbDataReader con la columna "Bloqueado" agregada
+                return datos;
+            }
+            else
+            {
+                // Credenciales inválidas o usuario no encontrado
+                return null;
+            }
         }
+
         catch (Exception ex)
         {
             Console.WriteLine("Error al ejecutar consulta: " + ex.Message);
             return null;
         }
     }
-
 
     public void Agregar(string tabla, string[] datos)
     {
@@ -168,26 +180,26 @@ public class Modelo
     }
 
 
-    //public void BloquearUsuario(string tabla, string[] datos, string idUsuario)
-    //{
-    //    BaseDatos com = new BaseDatos(); // Instancia a la base de datos
-    //    com.Conectar(); // Se conecta a la instancia
-    //    string sql = "UPDATE " + tabla + " SET "; // Query de actualización
+    public void BloquearUsuario(string tabla, string[] datos, string idUsuario)
+    {
+        BaseDatos com = new BaseDatos(); // Instancia a la base de datos
+        com.Conectar(); // Se conecta a la instancia
+        string sql = "UPDATE " + tabla + " SET "; // Query de actualización
 
-    //    foreach (string data1 in datos)
-    //    {
-    //        string[] partes = data1.Split(':');
-    //        sql += partes[0] + " = '" + partes[1] + "', ";
-    //    }
-    //    sql = sql.Substring(0, sql.Length - 2);
+        foreach (string data1 in datos)
+        {
+            string[] partes = data1.Split(':');
+            sql += partes[0] + " = '" + partes[1] + "', ";
+        }
+        sql = sql.Substring(0, sql.Length - 2);
 
-    //    // Agregar cláusula WHERE para actualizar solo el usuario específico
-    //    sql += " WHERE id_usuario = '" + idUsuario + "'";
+        // Agregar cláusula WHERE para actualizar solo el usuario específico
+        sql += " WHERE id_usuario = '" + idUsuario + "'";
 
-    //    com.CrearComando(sql);
-    //    // Debug.WriteLine(sql);
-    //    com.EjecutarComando();
-    //    com.Desconectar();
-    //}
+        com.CrearComando(sql);
+        // Debug.WriteLine(sql);
+        com.EjecutarComando();
+        com.Desconectar();
+    }
 
 }
